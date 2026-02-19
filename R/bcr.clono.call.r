@@ -336,7 +336,7 @@ BCR.CallClono.HD <- function(contig.list, seq="aa", V.gene=TRUE, CDR3=TRUE, J.ge
     tmppivot <- tmppivot[rev(order(tmppivot$sum)),]
     heavy <- c()
     light<- c()
-    splitseqs <- strsplit(seq, "_")
+    splitseqs <- strsplit(tmppivot$aa.CDR3.heavy_light.seq, "_")
     for (i in splitseqs){
         heavy<- c(heavy, nchar(i[1]))
         light<- c(light, nchar(i[2]) )
